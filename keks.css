@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+    background-image: url('Sveadalen_Roleplay_Wallpaper_PEjS_logotyp-1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.back {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* background-size: 100% 100%; */
+}
+
+p:before {
+    content: 'Laddar in kartan...';
+    animation: animate infinite 50s;
+    z-index: 9999;
+  }
+  
+  @keyframes animate {
+    0% {
+      transition: 300ms;  
+      content: 'Laddar in kartan';
+    }
+    25% {
+        transition: 300ms;  
+      content: 'Laddar in Karaktärer';
+    }
+    50% {
+        transition: 300ms;  
+      content: 'Laddar in scripts';
+    }
+    75% {
+        transition: 300ms;  
+      content: 'Laddar in spelare';
+    }
+    100% {
+        transition: 300ms;  
+      content: 'Laddar in Sveadalen';
+    }
+  }
+  
+  p:after {
+    content: '.';
+    font-size: 23px;
+    animation: dots23 1.2s steps(5, end) infinite;}
+  
+  @keyframes dots23 {
+    0%, 20% {
+      color: rgba(0,0,0,0);
+      text-shadow:
+        .25em 0 0 rgba(0,0,0,0),
+        .5em 0 0 rgba(0,0,0,0);}
+    40% {
+      color: rgb(75, 75, 75);
+      text-shadow:
+        .25em 0 0 rgba(0,0,0,0),
+        .5em 0 0 rgba(0,0,0,0);}
+    60% {
+      text-shadow:
+        .25em 0 0 rgb(75, 75, 75),
+        .5em 0 0 rgba(0,0,0,0);}
+    80%, 100% {
+      text-shadow:
+        .25em 0 0 rgb(75, 75, 75),
+        .5em 0 0 rgb(75, 75, 75);}}
+  
+
+.overlay {
+    z-index: 1500;
+    /* background: rgba(0, 0, 0, 0.77); */
+    width: 100%;
+    height: 100%;
+}
+
+
+.servername {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 15px;
+
+    color: rgb(168, 168, 168);
+
+    position: relative;
+    position: absolute;
+    letter-spacing: 1px;
+    z-index: 9999;
+
+    left: 5;
+    right: 0;
+    top: 850px;
+    text-shadow: 4px 3px 9px rgba(0,0,0,0.39);
+}
+
+
+
+@keyframes blink {
+    0%, 100% {
+        color: rgb(255, 255, 255);
+    }
+    50% {
+        color: rgb(124, 124, 124);
+    }
+    0%, 100% {
+        color: rgb(255, 255, 255);
+    }
+  }
+
+  .enable_music {
+    color: rgb(189, 189, 189);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+    position: relative;
+    position: absolute;
+    z-index: 9999;
+    font-weight: 400;
+
+    left: 3;
+    right: 0;
+    top: 60px;
+
+    animation: music 10s;
+}
+
+
+@keyframes music {
+    from {
+        opacity: 0;
+    }
+
+    to { 
+        opacity: 100;
+    }
+}
+
+.bottom
+{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#gradient
+{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+
+    height: 25%;
+
+}
+
+h1, h2 {
+  position: relative;
+  background: transparent;
+  z-index: 0;
+}
+/* add a single stroke */
+h1:before, h2:before {
+  content: attr(title);
+  position: absolute;
+  -webkit-text-stroke: 0.1em #000;
+  left: 0;
+  z-index: -1;
+}
+
+.letni
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 25%;
+
+    z-index: 5;
+
+    color: #fff;
+
+    
+}
+
+.letni p
+{
+
+    margin-left: 3px;
+
+    margin-top: 0px;
+}
+
+.letni h2, .letni h3
+{
+    font-family: 'Ubuntu', sans-serif;
+
+    text-transform: uppercase;
+
+    margin: 0px;
+
+    display: inline-block;
+}
+
+.top
+{
+    color: #fff;
+
+    position: absolute;
+    top: 7%;
+    left: 5%;
+    right: 5%;
+    -webkit-box-shadow: inset 200px 200px 300px 200px rgba(124, 124, 124, 0.082);
+    -moz-box-shadow: inset 200px 200px 300px 200px rgba(124, 124, 124, 0.082);
+    box-shadow: inset 200px 200px 300px 200px rgba(124, 124, 124, 0.082);
+}
+
+.top h1
+{
+
+    margin: 0px;
+}
+
+.top h2
+{
+
+    margin: 0px;
+
+    color: rgb(209, 209, 209);
+    border-radius: 5px;
+}
+
+.loadbar
+{
+    z-index: 99999999999999999;
+
+    width: 10%;
+    background-color: rgba(97, 97, 97, 0.26);
+    height: 3px;
+
+    margin: 0 auto;
+    position: absolute;
+
+    margin-top: 410px;
+    margin-bottom: 450px;
+    right: 0;
+    left: 0;
+    top: 100px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    display: block;
+
+    box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.368);
+}
+
+.thingy
+{
+    width: 8%;
+    background-color: rgb(231, 231, 231);
+    height: 3px;
+
+    position: absolute;
+    left: 10%;
+    -webkit-box-shadow: inset 200px 200px 300px 200px rgba(124, 124, 124, 0.082);
+    -moz-box-shadow: inset 200px 200px 300px 200px rgba(124, 124, 124, 0.082);
+    box-shadow: inset 200px 200px 300px 200px rgba(124, 124, 124, 0.082);
+}
